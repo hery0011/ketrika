@@ -1,0 +1,21 @@
+#nv{
+	background-color: #D0103A;
+}
+li a{
+	color: white;
+}
+#fond{
+	background-color: #F5F5DC;
+}
+#table{
+	margin-top: 30px;
+	text-align: center;
+}
+#th{
+	text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
