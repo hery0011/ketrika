@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>acceuil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body id="fond">
+
+	<div class="row">
+	    <div class="col-11 col-sm-11"></div>
+	    <div class="col-1 col-sm-1">
+	        <a href="deconnexion.php">Déconnexion</a>
+	    </div>
+	</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger" id="nv">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 2 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 3 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 4 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 5 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+	<!-- ===================================FORMULAIRE=========================================== -->
+	<form method="POST" action="traitement.php">
+		<div class="row">
+			<div class="col-xs-2 col-sm-2"></div>
+			<div class="col-xs-8 col-sm-8">
+				<div class="row">
+					<div class="col-xs-6 col-sm-2">
+						<input type="date" name="daty" class="form-control" placeholder="date">
+					</div>
+					<div class="col-xs-6 col-sm-2">
+						<select class="form-control" name="article">
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+						</select>
+					</div>
+					<div class="col-xs-6 col-sm-2">
+						<input type="text" name="montant" class="form-control" placeholder="montant">
+					</div>
+					<div class="col-xs-6 col-sm-2">
+						<input type="file" name="photo" class="form-control" >
+					</div>
+					<div class="col-xs-6 col-sm-2">
+						<button type="submit" style="background-color: #000080; color: white;">OK</button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-xs-2 col-sm-2"></div>
+		</div>
+	</form>
+
+	<!-- ===================================TABLEAU=========================================== -->
+	<div class="container" id="table">
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th id="th">Date</th>
+	        <th id="th">Article</th>
+	        <th id="th">Code</th>
+	        <th id="th">Montant</th>
+	        <th id="th">action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>
+	      		<div class="row">
+				    <div class="col-12 col-sm-12"></div>
+				        <a href="voir.php">
+				            <i class="fa fa-eye"></i>
+				        </a>
+				        <a href="supprimer.php">
+				            <i class="fa fa-trash-alt"></i>
+				        </a>
+				         <a href="modifier.php">
+				            <i class="fa fa-pencil-alt"></i>
+				        </a>
+				</div>
+	      	</td>
+	      </tr>
+
+	      <tr>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>
+	      		<div class="row">
+				    <div class="col-12 col-sm-12"></div>
+				        <a href="voir.php">
+				            <i class="fa fa-eye"></i>
+				        </a>
+				        <a href="supprimer.php">
+				            <i class="fa fa-trash-alt"></i>
+				        </a>
+				         <a href="modifier.php">
+				            <i class="fa fa-pencil-alt"></i>
+				        </a>
+				</div>
+	      	</td>
+	      </tr>
+	
+	      <tr>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>----------</td>
+	      	<td>
+	      		<div class="row">
+				    <div class="col-12 col-sm-12"></div>
+				        <a href="voir.php">
+				            <i class="fa fa-eye"></i>
+				        </a>
+				        <a href="supprimer.php">
+				            <i class="fa fa-trash-alt"></i>
+				        </a>
+				         <a href="modifier.php">
+				            <i class="fa fa-pencil-alt"></i>
+				        </a>
+						</div>
+	      	</td>
+	      </tr>
+	      <tr>
+		        <td></td>
+		        <td></td>
+		        <td>Total</td>
+		        <td>
+		          <strong>-----------</strong>
+		        </td>
+		        <td></td>
+      	</tr>
+	    </tbody>
+	  </table>
+	  
+	  <ul class="pagination">
+	    <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
+	    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+	  </ul>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
