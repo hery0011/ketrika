@@ -81,62 +81,154 @@
 
 
 	<!-- ===================================GRAPH 1=========================================== -->
-		<div class="row text-center">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+  <div class="row text-center">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <div id="myPlot1" style="width: 100%; max-width: 700px"></div>
+      <script>
+        const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+        const yArray = [55, 49, 44, 24, 15];
+        const layout = {
+          paper_bgcolor: "#F5F5DC"
+        };
+        const data = [{ labels: xArray, values: yArray, type: "pie" }];
+        Plotly.newPlot("myPlot1", data, layout);
+      </script>
+    </div>
+    <div class="col-md-5">
+      <div id="myPlot2" style="width: 100%; max-width: 700px"></div>
+      <script>
+        const xArray2 = ["Italy", "France", "Spain", "USA", "Argentina"];
+        const yArray2 = [55, 49, 44, 24, 15];
+        const layout2 = {
+          paper_bgcolor: "#F5F5DC"
+        };
+        const data2 = [{ labels: xArray2, values: yArray2, type: "pie" }];
+        Plotly.newPlot("myPlot2", data2, layout2);
+      </script>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
 
-        <div id="myPlot" style="width: 100%; max-width: 700px"></div>
 
-        <script>
-          const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
-          const yArray = [55, 49, 44, 24, 15];
+    <!-- ===================================GRAPH 1=========================================== -->
+    <div class="row text-center">
 
-          const layout = {
-            paper_bgcolor: "#F5F5DC"
-          };
-
-          const data = [{ labels: xArray, values: yArray, type: "pie" }];
-
-          Plotly.newPlot("myPlot", data, layout);
-        </script>
+      <div class="col-md-6">
+        <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-6">
+        <canvas id="myChart3" style="width:100%;max-width:600px;"></canvas>
+      </div>
+     
     </div>
 
+    <!-- ===================================GRAPH 3=========================================== -->
+    <div class="row text-center" style="margin-top: 40px;">
+       <div class="col-md-6">
+        <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+      </div>
+      <div class="col-md-6">
+        <canvas id="myChart4" style="width:100%;max-width:600px;"></canvas>
+      </div>
+    </div>
 
-  <!-- ===================================GRAPH 2=========================================== -->
-  <div class="row text-center">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+      // Code du Graph 1 (line)
+      const xValuesLine1 = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+      const yValuesLine1 = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
 
-      <script>
-      const xValues = [50,60,70,80,90,100,110,120,130,140,150];
-      const yValues = [7,8,8,9,9,9,10,11,14,14,15];
-
-      new Chart("myChart", {
+      new Chart("myChart1", {
         type: "line",
         data: {
-          labels: xValues,
+          labels: xValuesLine1,
           datasets: [{
             fill: false,
             lineTension: 0,
             backgroundColor: "rgba(0,0,255,1.0)",
             borderColor: "rgba(0,0,255,0.1)",
-            data: yValues
+            data: yValuesLine1
           }]
         },
         options: {
-          legend: {display: false},
+          legend: { display: false },
           scales: {
-            yAxes: [{ticks: {min: 6, max:16}}],
+            yAxes: [{ ticks: { min: 6, max: 16 } }]
           }
         }
       });
-      </script>
-    </div>
-    <div class="col-md-3"></div>
-  </div>
+
+      // Code du Graph 2 (bar)
+      var xValuesBar1 = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yValuesBar1 = [55, 49, 44, 24, 15];
+      var barColors1 = ["red", "green", "blue", "orange", "brown"];
+
+      new Chart("myChart2", {
+        type: "bar",
+        data: {
+          labels: xValuesBar1,
+          datasets: [{
+            backgroundColor: barColors1,
+            data: yValuesBar1
+          }]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "World Wine Production 2018"
+          }
+        }
+      });
+
+      // Code du Graph 3 (line)
+      const xValuesLine2 = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+      const yValuesLine2 = [9, 10, 10, 11, 11, 11, 12, 13, 16, 16, 17];
+
+      new Chart("myChart3", {
+        type: "line",
+        data: {
+          labels: xValuesLine2,
+          datasets: [{
+            fill: false,
+            lineTension: 0,
+            backgroundColor: "rgba(0,0,255,1.0)",
+            borderColor: "rgba(0,0,255,0.1)",
+            data: yValuesLine2
+          }]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{ ticks: { min: 8, max: 18 } }]
+          }
+        }
+      });
+
+      // Code du Graph 4 (bar)
+      var xValuesBar2 = ["Germany", "China", "Canada", "Brazil", "Australia"];
+      var yValuesBar2 = [42, 39, 35, 28, 20];
+      var barColors2 = ["purple", "yellow", "gray", "teal", "pink"];
+
+      new Chart("myChart4", {
+        type: "bar",
+        data: {
+          labels: xValuesBar2,
+          datasets: [{
+            backgroundColor: barColors2,
+            data: yValuesBar2
+          }]
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "World Beer Production 2018"
+          }
+        }
+      });
+    </script>
+
 
 </body>
 </html>
